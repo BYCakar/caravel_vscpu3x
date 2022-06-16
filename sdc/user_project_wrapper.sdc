@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Wed Jun 15 11:03:17 2022
+# Thu Jun 16 16:04:21 2022
 ###############################################################################
 current_design user_project_wrapper
 ###############################################################################
@@ -333,14 +333,6 @@ set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {la_
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {la_oenb[99]}]
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {la_oenb[9]}]
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {user_clock2}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vccd1}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vccd2}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vdda1}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vdda2}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssa1}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssa2}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssd1}]
-set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssd2}]
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wb_rst_i}]
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_adr_i[0]}]
 set_input_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_adr_i[10]}]
@@ -649,14 +641,6 @@ set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {la
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {user_irq[0]}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {user_irq[1]}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {user_irq[2]}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vccd1}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vccd2}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vdda1}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vdda2}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssa1}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssa2}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssd1}]
-set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {vssd2}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_ack_o}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_dat_o[0]}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_dat_o[10]}]
@@ -690,58 +674,9 @@ set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wb
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_dat_o[7]}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_dat_o[8]}]
 set_output_delay 5.0000 -clock [get_clocks {wb_clk_i}] -add_delay [get_ports {wbs_dat_o[9]}]
-set_false_path\
-    -from [get_clocks {wb_clk_i}]\
-    -through [get_ports {wb_rst_i}]\
-    -to [list [get_ports {io_oeb[0]}]\
-           [get_ports {io_oeb[10]}]\
-           [get_ports {io_oeb[11]}]\
-           [get_ports {io_oeb[12]}]\
-           [get_ports {io_oeb[13]}]\
-           [get_ports {io_oeb[14]}]\
-           [get_ports {io_oeb[15]}]\
-           [get_ports {io_oeb[16]}]\
-           [get_ports {io_oeb[17]}]\
-           [get_ports {io_oeb[18]}]\
-           [get_ports {io_oeb[19]}]\
-           [get_ports {io_oeb[1]}]\
-           [get_ports {io_oeb[20]}]\
-           [get_ports {io_oeb[21]}]\
-           [get_ports {io_oeb[22]}]\
-           [get_ports {io_oeb[23]}]\
-           [get_ports {io_oeb[24]}]\
-           [get_ports {io_oeb[25]}]\
-           [get_ports {io_oeb[26]}]\
-           [get_ports {io_oeb[27]}]\
-           [get_ports {io_oeb[28]}]\
-           [get_ports {io_oeb[29]}]\
-           [get_ports {io_oeb[2]}]\
-           [get_ports {io_oeb[30]}]\
-           [get_ports {io_oeb[31]}]\
-           [get_ports {io_oeb[32]}]\
-           [get_ports {io_oeb[33]}]\
-           [get_ports {io_oeb[34]}]\
-           [get_ports {io_oeb[35]}]\
-           [get_ports {io_oeb[36]}]\
-           [get_ports {io_oeb[37]}]\
-           [get_ports {io_oeb[3]}]\
-           [get_ports {io_oeb[4]}]\
-           [get_ports {io_oeb[5]}]\
-           [get_ports {io_oeb[6]}]\
-           [get_ports {io_oeb[7]}]\
-           [get_ports {io_oeb[8]}]\
-           [get_ports {io_oeb[9]}]]
 ###############################################################################
 # Environment
 ###############################################################################
-set_load -pin_load 0.0334 [get_ports {vccd1}]
-set_load -pin_load 0.0334 [get_ports {vccd2}]
-set_load -pin_load 0.0334 [get_ports {vdda1}]
-set_load -pin_load 0.0334 [get_ports {vdda2}]
-set_load -pin_load 0.0334 [get_ports {vssa1}]
-set_load -pin_load 0.0334 [get_ports {vssa2}]
-set_load -pin_load 0.0334 [get_ports {vssd1}]
-set_load -pin_load 0.0334 [get_ports {vssd2}]
 set_load -pin_load 0.0334 [get_ports {wbs_ack_o}]
 set_load -pin_load 0.0334 [get_ports {analog_io[28]}]
 set_load -pin_load 0.0334 [get_ports {analog_io[27]}]
@@ -1012,14 +947,6 @@ set_load -pin_load 0.0334 [get_ports {wbs_dat_o[2]}]
 set_load -pin_load 0.0334 [get_ports {wbs_dat_o[1]}]
 set_load -pin_load 0.0334 [get_ports {wbs_dat_o[0]}]
 set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {user_clock2}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vccd1}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vccd2}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vdda1}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vdda2}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vssa1}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vssa2}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vssd1}]
-set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {vssd2}]
 set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {wb_clk_i}]
 set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {wb_rst_i}]
 set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {wbs_cyc_i}]

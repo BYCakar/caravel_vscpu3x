@@ -53,6 +53,7 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
+ wire zero_;
  wire tx;
  wire cm_done;
  wire ct_done;
@@ -914,15 +915,6 @@ module user_project_wrapper (user_clock2,
  wire rst_asserted;
  wire rx_empty;
  wire rx_fifo_flush_enable;
- wire \sram_const_addr1[0] ;
- wire \sram_const_addr1[1] ;
- wire \sram_const_addr1[2] ;
- wire \sram_const_addr1[3] ;
- wire \sram_const_addr1[4] ;
- wire \sram_const_addr1[5] ;
- wire \sram_const_addr1[6] ;
- wire \sram_const_addr1[7] ;
- wire \sram_const_addr1[8] ;
  wire sram_const_csb1;
  wire \sram_const_wmask0[0] ;
  wire \sram_const_wmask0[1] ;
@@ -955,15 +947,15 @@ module user_project_wrapper (user_clock2,
     \agent_1_sram_comm_addr0[2] ,
     \agent_1_sram_comm_addr0[1] ,
     \agent_1_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\agent_1_sram_comm_din0[31] ,
     \agent_1_sram_comm_din0[30] ,
     \agent_1_sram_comm_din0[29] ,
@@ -1080,15 +1072,15 @@ module user_project_wrapper (user_clock2,
     \agent_1_sram_comm_addr0[2] ,
     \agent_1_sram_comm_addr0[1] ,
     \agent_1_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\agent_1_sram_comm_din0[31] ,
     \agent_1_sram_comm_din0[30] ,
     \agent_1_sram_comm_din0[29] ,
@@ -1205,15 +1197,15 @@ module user_project_wrapper (user_clock2,
     \agent_1_sram_comm_addr0[2] ,
     \agent_1_sram_comm_addr0[1] ,
     \agent_1_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\agent_1_sram_comm_din0[31] ,
     \agent_1_sram_comm_din0[30] ,
     \agent_1_sram_comm_din0[29] ,
@@ -1330,15 +1322,15 @@ module user_project_wrapper (user_clock2,
     \cm_sram_comm_addr0[2] ,
     \cm_sram_comm_addr0[1] ,
     \cm_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\cm_sram_comm_din0[31] ,
     \cm_sram_comm_din0[30] ,
     \cm_sram_comm_din0[29] ,
@@ -1455,15 +1447,15 @@ module user_project_wrapper (user_clock2,
     \cm_sram_comm_addr0[2] ,
     \cm_sram_comm_addr0[1] ,
     \cm_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\cm_sram_comm_din0[31] ,
     \cm_sram_comm_din0[30] ,
     \cm_sram_comm_din0[29] ,
@@ -1580,15 +1572,15 @@ module user_project_wrapper (user_clock2,
     \cm_sram_comm_addr0[2] ,
     \cm_sram_comm_addr0[1] ,
     \cm_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\cm_sram_comm_din0[31] ,
     \cm_sram_comm_din0[30] ,
     \cm_sram_comm_din0[29] ,
@@ -1705,15 +1697,15 @@ module user_project_wrapper (user_clock2,
     \cm_sram_comm_addr0[2] ,
     \cm_sram_comm_addr0[1] ,
     \cm_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\cm_sram_comm_din0[31] ,
     \cm_sram_comm_din0[30] ,
     \cm_sram_comm_din0[29] ,
@@ -1830,15 +1822,15 @@ module user_project_wrapper (user_clock2,
     \ct_sram_comm_addr0[2] ,
     \ct_sram_comm_addr0[1] ,
     \ct_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\ct_sram_comm_din0[31] ,
     \ct_sram_comm_din0[30] ,
     \ct_sram_comm_din0[29] ,
@@ -1955,15 +1947,15 @@ module user_project_wrapper (user_clock2,
     \ct_sram_comm_addr0[2] ,
     \ct_sram_comm_addr0[1] ,
     \ct_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\ct_sram_comm_din0[31] ,
     \ct_sram_comm_din0[30] ,
     \ct_sram_comm_din0[29] ,
@@ -2080,15 +2072,15 @@ module user_project_wrapper (user_clock2,
     \ct_sram_comm_addr0[2] ,
     \ct_sram_comm_addr0[1] ,
     \ct_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\ct_sram_comm_din0[31] ,
     \ct_sram_comm_din0[30] ,
     \ct_sram_comm_din0[29] ,
@@ -2205,15 +2197,15 @@ module user_project_wrapper (user_clock2,
     \ct_sram_comm_addr0[2] ,
     \ct_sram_comm_addr0[1] ,
     \ct_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\ct_sram_comm_din0[31] ,
     \ct_sram_comm_din0[30] ,
     \ct_sram_comm_din0[29] ,
@@ -2330,15 +2322,15 @@ module user_project_wrapper (user_clock2,
     \ct_sram_comm_addr0[2] ,
     \ct_sram_comm_addr0[1] ,
     \ct_sram_comm_addr0[0] }),
-    .addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .din0({\ct_sram_comm_din0[31] ,
     \ct_sram_comm_din0[30] ,
     \ct_sram_comm_din0[29] ,
@@ -3563,15 +3555,15 @@ module user_project_wrapper (user_clock2,
     \r_data[2] ,
     \r_data[1] ,
     \r_data[0] }),
-    .sram_const_addr1({\sram_const_addr1[8] ,
-    \sram_const_addr1[7] ,
-    \sram_const_addr1[6] ,
-    \sram_const_addr1[5] ,
-    \sram_const_addr1[4] ,
-    \sram_const_addr1[3] ,
-    \sram_const_addr1[2] ,
-    \sram_const_addr1[1] ,
-    \sram_const_addr1[0] }),
+    .sram_const_addr1({io_oeb[8],
+    io_oeb[7],
+    io_oeb[6],
+    io_oeb[5],
+    io_oeb[4],
+    io_oeb[3],
+    io_oeb[2],
+    io_oeb[1],
+    io_oeb[0]}),
     .sram_const_wmask0({\sram_const_wmask0[3] ,
     \sram_const_wmask0[2] ,
     \sram_const_wmask0[1] ,
@@ -3707,44 +3699,35 @@ module user_project_wrapper (user_clock2,
     \w_data[2] ,
     \w_data[1] ,
     \w_data[0] }));
- assign io_oeb[0] = wb_rst_i;
- assign io_oeb[10] = wb_rst_i;
- assign io_oeb[11] = wb_rst_i;
- assign io_oeb[12] = wb_rst_i;
- assign io_oeb[13] = wb_rst_i;
- assign io_oeb[14] = wb_rst_i;
- assign io_oeb[15] = wb_rst_i;
- assign io_oeb[16] = wb_rst_i;
- assign io_oeb[17] = wb_rst_i;
- assign io_oeb[18] = wb_rst_i;
- assign io_oeb[19] = wb_rst_i;
- assign io_oeb[1] = wb_rst_i;
- assign io_oeb[20] = wb_rst_i;
- assign io_oeb[21] = wb_rst_i;
- assign io_oeb[22] = wb_rst_i;
- assign io_oeb[23] = wb_rst_i;
- assign io_oeb[24] = wb_rst_i;
- assign io_oeb[25] = wb_rst_i;
- assign io_oeb[26] = wb_rst_i;
- assign io_oeb[27] = wb_rst_i;
- assign io_oeb[28] = wb_rst_i;
- assign io_oeb[29] = wb_rst_i;
- assign io_oeb[2] = wb_rst_i;
- assign io_oeb[30] = wb_rst_i;
- assign io_oeb[31] = wb_rst_i;
- assign io_oeb[32] = wb_rst_i;
- assign io_oeb[33] = wb_rst_i;
- assign io_oeb[34] = wb_rst_i;
- assign io_oeb[35] = wb_rst_i;
- assign io_oeb[36] = wb_rst_i;
- assign io_oeb[37] = wb_rst_i;
- assign io_oeb[3] = wb_rst_i;
- assign io_oeb[4] = wb_rst_i;
- assign io_oeb[5] = wb_rst_i;
- assign io_oeb[6] = wb_rst_i;
- assign io_oeb[7] = wb_rst_i;
- assign io_oeb[8] = wb_rst_i;
- assign io_oeb[9] = wb_rst_i;
+ assign io_oeb[10] = zero_;
+ assign io_oeb[11] = zero_;
+ assign io_oeb[12] = zero_;
+ assign io_oeb[13] = zero_;
+ assign io_oeb[14] = zero_;
+ assign io_oeb[15] = zero_;
+ assign io_oeb[16] = zero_;
+ assign io_oeb[17] = zero_;
+ assign io_oeb[18] = zero_;
+ assign io_oeb[19] = zero_;
+ assign io_oeb[20] = zero_;
+ assign io_oeb[21] = zero_;
+ assign io_oeb[22] = zero_;
+ assign io_oeb[23] = zero_;
+ assign io_oeb[24] = zero_;
+ assign io_oeb[25] = zero_;
+ assign io_oeb[26] = zero_;
+ assign io_oeb[27] = zero_;
+ assign io_oeb[28] = zero_;
+ assign io_oeb[29] = zero_;
+ assign io_oeb[30] = zero_;
+ assign io_oeb[31] = zero_;
+ assign io_oeb[32] = zero_;
+ assign io_oeb[33] = zero_;
+ assign io_oeb[34] = zero_;
+ assign io_oeb[35] = zero_;
+ assign io_oeb[36] = zero_;
+ assign io_oeb[37] = zero_;
+ assign io_oeb[9] = zero_;
  assign io_out[12] = tx;
  assign io_out[13] = cm_done;
  assign io_out[14] = ct_done;

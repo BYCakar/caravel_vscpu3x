@@ -1,4 +1,4 @@
-`define USE_POWER_PINS
+// `define USE_POWER_PINS
 //Listing 8.4
 module uart
    #( // Default setting:

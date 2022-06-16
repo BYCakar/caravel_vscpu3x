@@ -1,4 +1,4 @@
-`define USE_POWER_PINS
+// `define USE_POWER_PINS
 
 module VerySimpleCPU_core(
 	`ifdef USE_POWER_PINS

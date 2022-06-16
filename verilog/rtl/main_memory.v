@@ -1,4 +1,4 @@
-`define USE_POWER_PINS
+//`define USE_POWER_PINS
 
 module main_memory(
 	`ifdef USE_POWER_PINS

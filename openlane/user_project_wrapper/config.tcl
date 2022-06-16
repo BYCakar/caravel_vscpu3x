@@ -67,7 +67,7 @@ set ::env(CLOCK_PERIOD) "25"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
-set ::env(BASE_SDC_FILE) "$script_dir/../../sdc/user_project_wrapper_base.sdc"
+## set ::env(BASE_SDC_FILE) "$script_dir/../../sdc/user_project_wrapper_base.sdc"
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\

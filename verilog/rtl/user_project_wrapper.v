@@ -78,7 +78,7 @@ module user_project_wrapper #(
     output [2:0] user_irq
 );
 
-    assign io_oeb = {`MPRJ_IO_PADS{wb_rst_i}};
+    assign io_oeb = sram_const_addr1;
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
