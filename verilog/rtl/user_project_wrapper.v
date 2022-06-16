@@ -96,6 +96,9 @@ module user_project_wrapper #(
     wire [10:0] gpio_in;
     wire [10:0] gpio_out;
 
+    // uart clock divisor
+    wire [7:0] dvsr;
+
     // uart peripheral interface
     wire rx;
     wire tx;
@@ -116,6 +119,9 @@ module user_project_wrapper #(
     // gpio pins
     assign gpio_in          = io_in[26:16];
     assign io_out[37:27]    = gpio_out;
+
+    // uart clock divisor
+    assign dvsr             = la_data_in[7:0];
 
     // uart peripheral interface
     assign rx               = io_in[11];
@@ -833,6 +839,7 @@ module user_project_wrapper #(
 
         .clk(clk),
         .reset(rst_asserted),
+        .dvsr(dvsr),
         .rx_fifo_flush_enable(rx_fifo_flush_enable),
         .rd_uart(rd_uart),
         .wr_uart(wr_uart),

@@ -89,4 +89,10 @@ void main()
      /* Apply configuration */
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
+    
+    // Configure LA probes [31:0] as outputs from the cpu
+	reg_la0_oenb = reg_la0_iena = 0xFFFFFFFF;    // [31:0]
+	
+	// Set UART clock divisor value to 27 through LA probes (BaudRate: 115200)
+	reg_la0_data = 0x0000001B;
 }

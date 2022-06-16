@@ -12,39 +12,103 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 246.000 64.640 250.000 65.240 ;
+        RECT 0.000 61.240 4.000 61.840 ;
     END
   END clk
+  PIN dvsr[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 235.150 246.000 235.430 250.000 ;
+    END
+  END dvsr[0]
+  PIN dvsr[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 116.010 0.000 116.290 4.000 ;
+    END
+  END dvsr[1]
+  PIN dvsr[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 87.030 246.000 87.310 250.000 ;
+    END
+  END dvsr[2]
+  PIN dvsr[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 91.840 4.000 92.440 ;
+    END
+  END dvsr[3]
+  PIN dvsr[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 246.000 78.240 250.000 78.840 ;
+    END
+  END dvsr[4]
+  PIN dvsr[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 144.990 246.000 145.270 250.000 ;
+    END
+  END dvsr[5]
+  PIN dvsr[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 235.150 0.000 235.430 4.000 ;
+    END
+  END dvsr[6]
+  PIN dvsr[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 246.000 139.440 250.000 140.040 ;
+    END
+  END dvsr[7]
   PIN r_data[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met3 ;
-        RECT 0.000 81.640 4.000 82.240 ;
+      LAYER met2 ;
+        RECT 206.170 0.000 206.450 4.000 ;
     END
   END r_data[0]
   PIN r_data[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met2 ;
-        RECT 190.070 246.000 190.350 250.000 ;
+      LAYER met3 ;
+        RECT 246.000 170.040 250.000 170.640 ;
     END
   END r_data[1]
   PIN r_data[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met2 ;
-        RECT 231.930 0.000 232.210 4.000 ;
+      LAYER met3 ;
+        RECT 0.000 30.640 4.000 31.240 ;
     END
   END r_data[2]
   PIN r_data[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met3 ;
-        RECT 246.000 227.840 250.000 228.440 ;
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
     END
   END r_data[3]
   PIN r_data[4]
@@ -52,23 +116,23 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 74.150 246.000 74.430 250.000 ;
+        RECT 173.970 246.000 174.250 250.000 ;
     END
   END r_data[4]
   PIN r_data[5]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met3 ;
-        RECT 0.000 122.440 4.000 123.040 ;
+      LAYER met2 ;
+        RECT 206.170 246.000 206.450 250.000 ;
     END
   END r_data[5]
   PIN r_data[6]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met2 ;
-        RECT 228.710 246.000 228.990 250.000 ;
+      LAYER met3 ;
+        RECT 0.000 187.040 4.000 187.640 ;
     END
   END r_data[6]
   PIN r_data[7]
@@ -76,7 +140,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 35.510 246.000 35.790 250.000 ;
+        RECT 58.050 246.000 58.330 250.000 ;
     END
   END r_data[7]
   PIN rd_uart
@@ -84,7 +148,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 116.010 0.000 116.290 4.000 ;
+        RECT 177.190 0.000 177.470 4.000 ;
     END
   END rd_uart
   PIN reset
@@ -92,15 +156,15 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 40.840 4.000 41.440 ;
+        RECT 0.000 217.640 4.000 218.240 ;
     END
   END reset
   PIN rx
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
-      LAYER met2 ;
-        RECT 193.290 0.000 193.570 4.000 ;
+      LAYER met3 ;
+        RECT 246.000 13.640 250.000 14.240 ;
     END
   END rx
   PIN rx_empty
@@ -108,7 +172,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 0.090 0.000 0.370 4.000 ;
+        RECT 29.070 0.000 29.350 4.000 ;
     END
   END rx_empty
   PIN rx_fifo_flush_enable
@@ -116,7 +180,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 38.730 0.000 39.010 4.000 ;
+        RECT 58.050 0.000 58.330 4.000 ;
     END
   END rx_fifo_flush_enable
   PIN tx
@@ -124,7 +188,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 112.790 246.000 113.070 250.000 ;
+        RECT 25.850 246.000 26.130 250.000 ;
     END
   END tx
   PIN tx_full
@@ -132,7 +196,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 246.000 23.840 250.000 24.440 ;
+        RECT 246.000 47.640 250.000 48.240 ;
     END
   END tx_full
   PIN vccd1
@@ -160,7 +224,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 77.370 0.000 77.650 4.000 ;
+        RECT 87.030 0.000 87.310 4.000 ;
     END
   END w_data[0]
   PIN w_data[1]
@@ -168,7 +232,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 246.000 146.240 250.000 146.840 ;
+        RECT 246.000 204.040 250.000 204.640 ;
     END
   END w_data[1]
   PIN w_data[2]
@@ -176,7 +240,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 246.000 187.040 250.000 187.640 ;
+        RECT 246.000 234.640 250.000 235.240 ;
     END
   END w_data[2]
   PIN w_data[3]
@@ -184,7 +248,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 204.040 4.000 204.640 ;
+        RECT 0.000 156.440 4.000 157.040 ;
     END
   END w_data[3]
   PIN w_data[4]
@@ -192,7 +256,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 151.430 246.000 151.710 250.000 ;
+        RECT 116.010 246.000 116.290 250.000 ;
     END
   END w_data[4]
   PIN w_data[5]
@@ -200,7 +264,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 154.650 0.000 154.930 4.000 ;
+        RECT 148.210 0.000 148.490 4.000 ;
     END
   END w_data[5]
   PIN w_data[6]
@@ -208,7 +272,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 163.240 4.000 163.840 ;
+        RECT 0.000 122.440 4.000 123.040 ;
     END
   END w_data[6]
   PIN w_data[7]
@@ -216,7 +280,7 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 244.840 4.000 245.440 ;
+        RECT 0.000 248.240 4.000 248.840 ;
     END
   END w_data[7]
   PIN wr_uart
@@ -224,57 +288,67 @@ MACRO uart
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 246.000 105.440 250.000 106.040 ;
+        RECT 246.000 108.840 250.000 109.440 ;
     END
   END wr_uart
   OBS
       LAYER li1 ;
         RECT 5.520 10.795 244.260 236.725 ;
       LAYER met1 ;
-        RECT 0.070 10.640 244.260 236.880 ;
+        RECT 0.070 10.240 244.260 236.880 ;
       LAYER met2 ;
-        RECT 0.100 245.720 35.230 246.570 ;
-        RECT 36.070 245.720 73.870 246.570 ;
-        RECT 74.710 245.720 112.510 246.570 ;
-        RECT 113.350 245.720 151.150 246.570 ;
-        RECT 151.990 245.720 189.790 246.570 ;
-        RECT 190.630 245.720 228.430 246.570 ;
-        RECT 229.270 245.720 240.940 246.570 ;
-        RECT 0.100 4.280 240.940 245.720 ;
-        RECT 0.650 4.000 38.450 4.280 ;
-        RECT 39.290 4.000 77.090 4.280 ;
-        RECT 77.930 4.000 115.730 4.280 ;
-        RECT 116.570 4.000 154.370 4.280 ;
-        RECT 155.210 4.000 193.010 4.280 ;
-        RECT 193.850 4.000 231.650 4.280 ;
-        RECT 232.490 4.000 240.940 4.280 ;
+        RECT 0.100 245.720 25.570 248.725 ;
+        RECT 26.410 245.720 57.770 248.725 ;
+        RECT 58.610 245.720 86.750 248.725 ;
+        RECT 87.590 245.720 115.730 248.725 ;
+        RECT 116.570 245.720 144.710 248.725 ;
+        RECT 145.550 245.720 173.690 248.725 ;
+        RECT 174.530 245.720 205.890 248.725 ;
+        RECT 206.730 245.720 234.870 248.725 ;
+        RECT 235.710 245.720 240.490 248.725 ;
+        RECT 0.100 4.280 240.490 245.720 ;
+        RECT 0.650 4.000 28.790 4.280 ;
+        RECT 29.630 4.000 57.770 4.280 ;
+        RECT 58.610 4.000 86.750 4.280 ;
+        RECT 87.590 4.000 115.730 4.280 ;
+        RECT 116.570 4.000 147.930 4.280 ;
+        RECT 148.770 4.000 176.910 4.280 ;
+        RECT 177.750 4.000 205.890 4.280 ;
+        RECT 206.730 4.000 234.870 4.280 ;
+        RECT 235.710 4.000 240.490 4.280 ;
       LAYER met3 ;
-        RECT 4.400 244.440 246.000 245.305 ;
-        RECT 4.000 228.840 246.000 244.440 ;
-        RECT 4.000 227.440 245.600 228.840 ;
-        RECT 4.000 205.040 246.000 227.440 ;
-        RECT 4.400 203.640 246.000 205.040 ;
+        RECT 4.400 247.840 246.000 248.705 ;
+        RECT 4.000 235.640 246.000 247.840 ;
+        RECT 4.000 234.240 245.600 235.640 ;
+        RECT 4.000 218.640 246.000 234.240 ;
+        RECT 4.400 217.240 246.000 218.640 ;
+        RECT 4.000 205.040 246.000 217.240 ;
+        RECT 4.000 203.640 245.600 205.040 ;
         RECT 4.000 188.040 246.000 203.640 ;
-        RECT 4.000 186.640 245.600 188.040 ;
-        RECT 4.000 164.240 246.000 186.640 ;
-        RECT 4.400 162.840 246.000 164.240 ;
-        RECT 4.000 147.240 246.000 162.840 ;
-        RECT 4.000 145.840 245.600 147.240 ;
-        RECT 4.000 123.440 246.000 145.840 ;
+        RECT 4.400 186.640 246.000 188.040 ;
+        RECT 4.000 171.040 246.000 186.640 ;
+        RECT 4.000 169.640 245.600 171.040 ;
+        RECT 4.000 157.440 246.000 169.640 ;
+        RECT 4.400 156.040 246.000 157.440 ;
+        RECT 4.000 140.440 246.000 156.040 ;
+        RECT 4.000 139.040 245.600 140.440 ;
+        RECT 4.000 123.440 246.000 139.040 ;
         RECT 4.400 122.040 246.000 123.440 ;
-        RECT 4.000 106.440 246.000 122.040 ;
-        RECT 4.000 105.040 245.600 106.440 ;
-        RECT 4.000 82.640 246.000 105.040 ;
-        RECT 4.400 81.240 246.000 82.640 ;
-        RECT 4.000 65.640 246.000 81.240 ;
-        RECT 4.000 64.240 245.600 65.640 ;
-        RECT 4.000 41.840 246.000 64.240 ;
-        RECT 4.400 40.440 246.000 41.840 ;
-        RECT 4.000 24.840 246.000 40.440 ;
-        RECT 4.000 23.440 245.600 24.840 ;
-        RECT 4.000 10.715 246.000 23.440 ;
-      LAYER met4 ;
-        RECT 46.295 103.535 47.545 118.825 ;
+        RECT 4.000 109.840 246.000 122.040 ;
+        RECT 4.000 108.440 245.600 109.840 ;
+        RECT 4.000 92.840 246.000 108.440 ;
+        RECT 4.400 91.440 246.000 92.840 ;
+        RECT 4.000 79.240 246.000 91.440 ;
+        RECT 4.000 77.840 245.600 79.240 ;
+        RECT 4.000 62.240 246.000 77.840 ;
+        RECT 4.400 60.840 246.000 62.240 ;
+        RECT 4.000 48.640 246.000 60.840 ;
+        RECT 4.000 47.240 245.600 48.640 ;
+        RECT 4.000 31.640 246.000 47.240 ;
+        RECT 4.400 30.240 246.000 31.640 ;
+        RECT 4.000 14.640 246.000 30.240 ;
+        RECT 4.000 13.240 245.600 14.640 ;
+        RECT 4.000 10.715 246.000 13.240 ;
   END
 END uart
 END LIBRARY

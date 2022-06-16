@@ -181,6 +181,7 @@ module uart_rw_test_tb;
     uart inst_uart (
 		.clk(clock),
 		.reset(rst),
+		.dvsr(8'h1b),
 		.rx_fifo_flush_enable(1'b0),
 		.rd_uart(rd_uart),
 		.wr_uart(wr_uart),

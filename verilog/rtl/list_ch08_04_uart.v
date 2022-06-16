@@ -1,4 +1,3 @@
-// `define USE_POWER_PINS
 //Listing 8.4
 module uart
    #( // Default setting:
@@ -6,9 +5,7 @@ module uart
       parameter DBIT = 8,     // # data bits
                 SB_TICK = 16, // # ticks for stop bits, 16/24/32
                               // for 1/1.5/2 stop bits
-                DVSR = 27,   // baud rate divisor
-                              // DVSR = 100M/(16*baud rate)
-                DVSR_BIT = 9, // # bits of DVSR
+                DVSR_BIT = 8, // # bits of DVSR
                 FIFO_W = 4    // # addr bits of FIFO
                               // # words in FIFO=2^FIFO_W
    )
@@ -18,7 +15,9 @@ module uart
       inout vssd1, // GND
    `endif
     input wire clk, reset,
-	 input rx_fifo_flush_enable,
+    input wire [DVSR_BIT - 1:0] dvsr,   // baud rate divisor
+                              // DVSR = 100M/(16*baud rate)
+    input rx_fifo_flush_enable,
     input wire rd_uart, wr_uart, rx,
     input wire [7:0] w_data,
     output wire tx_full, rx_empty, tx,
@@ -31,8 +30,8 @@ module uart
    wire [7:0] tx_fifo_out, rx_data_out;
 
    //body
-   mod_m_counter #(.M(DVSR), .N(DVSR_BIT)) baud_gen_unit
-      (.clk(clk), .reset(reset), .q(), .max_tick(tick));
+   mod_m_counter #(.N(DVSR_BIT)) baud_gen_unit
+      (.clk(clk), .dvsr(dvsr), .reset(reset), .q(), .max_tick(tick));
 
    uart_rx #(.DBIT(DBIT), .SB_TICK(SB_TICK)) uart_rx_unit
       (.clk(clk), .reset(reset), .rx(rx), .s_tick(tick),

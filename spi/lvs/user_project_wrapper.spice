@@ -54,10 +54,10 @@
 .ends
 
 * Black-box entry subcircuit for uart abstract view
-.subckt uart clk r_data[0] r_data[1] r_data[2] r_data[3] r_data[4] r_data[5] r_data[6]
-+ r_data[7] rd_uart reset rx rx_empty rx_fifo_flush_enable tx tx_full vccd1 vssd1
-+ w_data[0] w_data[1] w_data[2] w_data[3] w_data[4] w_data[5] w_data[6] w_data[7]
-+ wr_uart
+.subckt uart clk dvsr[0] dvsr[1] dvsr[2] dvsr[3] dvsr[4] dvsr[5] dvsr[6] dvsr[7] r_data[0]
++ r_data[1] r_data[2] r_data[3] r_data[4] r_data[5] r_data[6] r_data[7] rd_uart reset
++ rx rx_empty rx_fifo_flush_enable tx tx_full vccd1 vssd1 w_data[0] w_data[1] w_data[2]
++ w_data[3] w_data[4] w_data[5] w_data[6] w_data[7] wr_uart
 .ends
 
 * Black-box entry subcircuit for main_controller abstract view
@@ -945,12 +945,14 @@ Xinst_main_memory inst_main_memory/addra[0] inst_main_memory/addra[1] inst_main_
 + io_in[23] io_in[24] io_in[25] io_out[27] io_out[37] io_out[28] io_out[29] io_out[30]
 + io_out[31] io_out[32] io_out[33] io_out[34] io_out[35] io_out[36] vccd1 vssd1 inst_main_memory/wea
 + main_memory
-Xinst_uart wb_clk_i inst_uart/r_data[0] inst_uart/r_data[1] inst_uart/r_data[2] inst_uart/r_data[3]
-+ inst_uart/r_data[4] inst_uart/r_data[5] inst_uart/r_data[6] inst_uart/r_data[7]
-+ inst_uart/rd_uart inst_uart/reset io_in[11] inst_uart/rx_empty inst_uart/rx_fifo_flush_enable
-+ io_out[12] inst_uart/tx_full vccd1 vssd1 inst_uart/w_data[0] inst_uart/w_data[1]
-+ inst_uart/w_data[2] inst_uart/w_data[3] inst_uart/w_data[4] inst_uart/w_data[5]
-+ inst_uart/w_data[6] inst_uart/w_data[7] inst_uart/wr_uart uart
+Xinst_uart wb_clk_i la_data_in[0] la_data_in[1] la_data_in[2] la_data_in[3] la_data_in[4]
++ la_data_in[5] la_data_in[6] la_data_in[7] inst_uart/r_data[0] inst_uart/r_data[1]
++ inst_uart/r_data[2] inst_uart/r_data[3] inst_uart/r_data[4] inst_uart/r_data[5]
++ inst_uart/r_data[6] inst_uart/r_data[7] inst_uart/rd_uart inst_uart/reset io_in[11]
++ inst_uart/rx_empty inst_uart/rx_fifo_flush_enable io_out[12] inst_uart/tx_full vccd1
++ vssd1 inst_uart/w_data[0] inst_uart/w_data[1] inst_uart/w_data[2] inst_uart/w_data[3]
++ inst_uart/w_data[4] inst_uart/w_data[5] inst_uart/w_data[6] inst_uart/w_data[7]
++ inst_uart/wr_uart uart
 Xinst_main_controller inst_agent_1/mem_ctrl_addr[0] inst_agent_1/mem_ctrl_addr[10]
 + inst_agent_1/mem_ctrl_addr[11] inst_agent_1/mem_ctrl_addr[12] inst_agent_1/mem_ctrl_addr[13]
 + inst_agent_1/mem_ctrl_addr[1] inst_agent_1/mem_ctrl_addr[2] inst_agent_1/mem_ctrl_addr[3]
