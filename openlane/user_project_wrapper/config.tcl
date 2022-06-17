@@ -105,8 +105,8 @@ set ::env(RT_MAX_LAYER) {met4}
 set ::env(PL_MACRO_CHANNEL) {30 30}
 set ::env(PL_MACRO_HALO) {10 10}
 
-# set ::env(FP_PDN_VPITCH) 80
-# set ::env(FP_PDN_HPITCH) $::env(FP_PDN_VPITCH)
+set ::env(FP_PDN_VPITCH) 100
+set ::env(FP_PDN_HPITCH) $::env(FP_PDN_VPITCH)
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.

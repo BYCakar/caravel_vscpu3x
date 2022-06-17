@@ -1,5 +1,3 @@
-//`define USE_POWER_PINS
-
 module main_controller(
 	`ifdef USE_POWER_PINS
 		inout vccd1, // VDD
