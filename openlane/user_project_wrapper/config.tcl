@@ -105,7 +105,7 @@ set ::env(RT_MAX_LAYER) {met4}
 set ::env(PL_MACRO_CHANNEL) {30 30}
 set ::env(PL_MACRO_HALO) {10 10}
 
-set ::env(FP_PDN_VPITCH) 120
+set ::env(FP_PDN_VPITCH) 140
 set ::env(FP_PDN_HPITCH) $::env(FP_PDN_VPITCH)
 
 # set ::env(FP_PDN_VOFFSET) 30
