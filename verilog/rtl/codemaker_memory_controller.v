@@ -1,3 +1,5 @@
+`include "parameters.v"
+
 module codemaker_memory_controller(
 
 	// clock and reset interface

@@ -13,7 +13,6 @@
 // limitations under the License.
 // SPDX-License-Identifier: Apache-2.0
 
-`default_nettype none
 /*
  *-------------------------------------------------------------
  *
@@ -77,8 +76,6 @@ module user_project_wrapper #(
     // User maskable interrupt signals
     output [2:0] user_irq
 );
-
-    assign io_oeb = sram_const_addr1;
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
@@ -265,6 +262,8 @@ module user_project_wrapper #(
     wire tx_full;
     wire rx_empty;
     wire [7:0] r_data;
+
+    assign io_oeb = sram_const_addr1;
 
     // codemaker
     VerySimpleCPU_core inst_codemaker(

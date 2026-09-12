@@ -1,3 +1,5 @@
+`include "parameters.v"
+
 module control_tower_memory_controller(
 
 	// clock and reset interface

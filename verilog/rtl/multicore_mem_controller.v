@@ -1,3 +1,5 @@
+`include "parameters.v"
+
 module multicore_mem_controller(
 	// clock and reset interface
 	input clk,

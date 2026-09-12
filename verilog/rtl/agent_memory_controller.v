@@ -1,3 +1,5 @@
+`include "parameters.v"
+
 module agent_1_memory_controller(
 
 	// clock and reset interface
